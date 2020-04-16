@@ -1,0 +1,40 @@
+
+Showing logs for build [32mbeppevanrolleghem-environment-f-95fs5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-v9xmp[0m
+{"level":"warn","ts":1587024346.4656248,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587024346.4681065,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbeppevanrolleghem-environment-f-95fs5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-289qt[0m
+{"level":"warn","ts":1587024347.8166761,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1587024347.8251696,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mbeppevanrolleghem-environment-f-95fs5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbeppevanrolleghem-environment-f-95fs5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-beppevanrolleghem-environment-f-95fs5-dlgmf[0m
+{"level":"warn","ts":1587024352.052531,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1587024353.1033256,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*****************/environment-ff-stage-euw1-gkecluster-primary-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mbeppevanrolleghem-environment-f-95fs5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:57da06202b3fcb35579ad3ccf649993a8c4a87b6,1:b0c8f282aee9f492d1ac91f3c7d188b6137a70cc
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow b0c8f282aee9f492d1ac91f3c7d188b6137a70cc: 57da06202b3fcb35579ad3ccf649993a8c4a87b6:
+DEBUG: ran git fetch --unshallow origin b0c8f282aee9f492d1ac91f3c7d188b6137a70cc: 57da06202b3fcb35579ad3ccf649993a8c4a87b6: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 57da06202b3fcb35579ad3ccf649993a8c4a87b6
+DEBUG: ran git reset --hard 57da06202b3fcb35579ad3ccf649993a8c4a87b6 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b0c8f282aee9f492d1ac91f3c7d188b6137a70cc
+DEBUG: ran git merge b0c8f282aee9f492d1ac91f3c7d188b6137a70cc in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 57da06202b3fcb35579ad3ccf649993a8c4a87b6..HEAD
+Merged SHA b0c8f282aee9f492d1ac91f3c7d188b6137a70cc with commit message 'chore: Promote frontend-node to version 0.0.1' into base branch master
+
+Showing logs for build [32mbeppevanrolleghem-environment-f-95fs5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
